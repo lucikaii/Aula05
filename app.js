@@ -19,7 +19,7 @@ botaoMostrarNumeros.addEventListener('click', mostrarNumeros)
 
 const botaoMostrarNumerosPares = document.getElementById('mostrarNumerosPares')
 
-function mostarNumerosPares(){
+function mostrarNumerosPares(){
 
      const numbers = document.getElementById('numbers').value.split(',')
      const containerPares = document.getElementById('containerTodosNumerosPares')
@@ -35,4 +35,27 @@ function mostarNumerosPares(){
      }
  }
 
- botaoMostrarNumerosPares.addEventListener('click', mostarNumerosPares)
+ botaoMostrarNumerosPares.addEventListener('click', mostrarNumerosPares)
+
+ const botaoMostrarNumerosImpares = document.getElementById('mostrarNumerosImpares')
+
+ function mostrarNumerosImpares(){
+    const numbers = document.getElementById('numbers').value.split(',')
+    const containerImpares = document.getElementById('containerTodosNumerosImpares')
+    containerImpares.replaceChildren('')
+    const ultimoIndice = numbers.length
+    for(let contador=0; contador < ultimoIndice; contador++){
+        if(numbers[contador] % 2 != 0){
+            const novoSpan = document.createElement('span')
+            novoSpan.textContent = numbers[contador]
+            containerImpares.appendChild(novoSpan)
+        }
+    }
+ }
+
+ botaoMostrarNumerosImpares.addEventListener('click', mostrarNumerosImpares)
+
+const mostrarNumerosMultiplos3e4 = document.getElementById('mostrarNumerosMultiplos3e4')
+
+
+ botaoMostrarNumerosMultiplos3e4.addEventListener('click', mostrarNumerosMultiplos3e4)

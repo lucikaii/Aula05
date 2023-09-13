@@ -38,7 +38,7 @@ main{
     flex-grow: 1;
     padding: 0px 8px;
 }
-.numeros span{
+ span{
     display: inline-block;
     background-color: #C5E2C1;
     width: 50px;
